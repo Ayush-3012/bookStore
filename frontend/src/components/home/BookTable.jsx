@@ -3,7 +3,7 @@ import { AiOutlineEdit } from "react-icons/ai";
 import { BsInfoCircle } from "react-icons/bs";
 import { MdOutlineDelete } from "react-icons/md";
 
-// eslint-disable-next-line react/prop-types
+{/* eslint-disable react/prop-types */}
 const BooksTable = ({books}) => {
   return (
     <table className="w-full border-separate border-spacing-2">
@@ -21,7 +21,6 @@ const BooksTable = ({books}) => {
         </tr>
       </thead>
       <tbody>
-        {/* eslint-disable-next-line react/prop-types */}
         {books.map((book, index) => (
           <tr key={book._id} className="h-8">
             <td className="border border-slate-700 rounded-md text-center">
