@@ -13,7 +13,16 @@ const uri = process.env.MONGO_URI;
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect(uri);
+mongoose
+  .connect(uri)
+  .then((res) =>
+    console.log(
+      "Connected to MongoDB : ",
+      res.connection.name,
+      " HOST !!! ",
+      res.connection.host
+    )
+  );
 
 app.get("/", async (req, res) => {
   res.status(200).send("Loaded");
